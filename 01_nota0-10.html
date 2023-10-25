@@ -6,10 +6,15 @@
     */
 
     //Entrada
-
+    let numero = Number(prompt("informe a nota entre 0 e 10:").trim());
+    
+    while (numero <= 0 || numero >= 10) {
+        alert(`Numero invalido`)
+        numero = Number(prompt("informe a nota entre 0 e 10:").trim());   
+    }
 
     //Processamento
-
+    
 
     //Saída
 
