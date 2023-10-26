@@ -20,11 +20,42 @@
     */
 
     //Entrada
-
-
+    let nulos = 0;
+    let brancos = 0;
+    let joaozinho = 0;
+    let mariazinha = 0;
+    let voto = "";
+    let mensagem = `O candidato Joãozinho e a candidata Mariazinha ganharam, respectivamente `;
     //Processamento
-
+    do {
+        voto = parseInt(prompt(`Em qual dessas opções você deseja votar? \n 1 - Joãozinho | 2 - Mariazinha | 3 - Nulo | 4 - Branco`).trim());
+        if (voto == 1) {
+            joaozinho++;
+        }
+        else if (voto == 2) {
+            mariazinha++;
+        }
+        else if (voto == 3) {
+            nulos++;
+        }
+        else if (voto == 4) {
+            brancos++;
+        }
+    } while (voto != 0);
+    mensagem += `${joaozinho} e ${mariazinha}, respectivamente. <br> A porcentagem de nulos foi de `;
+    let total = joaozinho + mariazinha + nulos + brancos;
+    let porcentagemNulo = (nulos * 100) / total;
+    mensagem += `${porcentagemNulo.toFixed(1).replace(".", ",")}% e a porcentagem de votos brancos foi de `;
+    let porcentagemBranco = (brancos * 100) / total;
+    mensagem += `${porcentagemBranco.toFixed(1).replace(".", ",")}%. <br> O vencedor foi `;
 
     //Saída
-
+    if (joaozinho > mariazinha) {
+        mensagem += `Joãozinho, com ${((joaozinho  * 100) / total).toFixed(1).replace(".", ",")}% dos votos.`;
+    }
+    else {
+        mensagem += `Mariazinha, com ${((mariazinha  * 100) / total).toFixed(1).replace(".", ",")}% dos votos. <br>`;
+    }
+    mensagem += `O total de votos foi de ${total}.`
+    document.write(mensagem)
 </script>
