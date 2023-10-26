@@ -6,10 +6,22 @@
     */
 
     //Entrada
-
+    let senha
+    let verificarSenha
+    let erro = 0;
 
     //Processamento
-
+    do {
+        senha = prompt("insirar a senha de 4, não pode ser menor que 4 ou maior que 4")
+    } while (senha.length != 4 || isNaN(senha))
+    do {
+        if (erro > 0) {
+            alert(`Senha Incorreta`)
+        }
+        verificarSenha = prompt("informe sua senha novamente")
+        erro++
+    } while (senha != verificarSenha)
+    alert(`Senha Correta`)
 
     //Saída
 

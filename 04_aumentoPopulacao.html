@@ -6,11 +6,18 @@
     */
 
     //Entrada
-
-
+    let popuA = 80000 
+    let popuB = 200000 
+    let anosA = 0
     //Processamento
-
-
+    while (popuA < popuB) {
+        popuB = popuB * 1.015
+        popuA = popuA * 1.03
+        anosA++
+    }
+    while (popuA >= popuB) {
+        alert(`o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B é de ${anosA}`)
+    }
     //Saída
 
 </script>

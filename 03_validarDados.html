@@ -11,38 +11,39 @@
     */
 
     //Entrada
-    let nome = ""
-    let idade = ""
-    let salário = ""
-    let sexo = ""
-    let estadoCivil = ""
+    let nome = "";
+    let idade = "";
+    let salario = 0;
+    let sexo = "";
+    let estadoCivil = "";
 
     //Processamento
     do {
-    nome = prompt("insirar o usuario")
-    } while (condition) {
+    nome = prompt("insirar o usuario maior que 3 caracteres")
+    } while (nome.length <= 3) {
+
+    } 
+    do {
+    idade = prompt("insirar a idade, entre 0 e 150")
+    } while (idade <= 0 || idade >= 150) {
 
     }
     do {
-    nome = prompt("insirar o usuario")
-    } while (condition) {
+    salario = Number(prompt("insirar o salario maior que zero"))
+    } while (salario <= 0) {
 
     }
     do {
-
-    } while (condition) {
-
-    }
-    do {
-
-    } while (condition) {
+    sexo = prompt("insirar o genero F/M").toUpperCase();
+    } while (sexo != "F" && sexo != "M") {
 
     }
     do {
-
-    } while (condition) {
+    estadoCivil = prompt("insirar o estadoCivil ( S - solteiro, C - casado, V - viuvo, D - divorciado)").toUpperCase();
+    } while (estadoCivil != "S" && estadoCivil != "C" && estadoCivil != "V" && estadoCivil != "D") {
 
     }
+    
 
     //Saída
 
